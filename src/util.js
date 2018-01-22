@@ -11,14 +11,14 @@ const sequelize = new Sequelize({
     acquire: 30000,
     idle: 10000
   },
-  storage: '/Users/paveynganpi/usage_data.sqlite3',
+  storage: 'home/demo/usage_data.sqlite3',
   logging: false,
 });
-
+// Users/paveynganpi/usage_data.sqlite3
 // defines sqlite table
 const UsageData = sequelize.define('usage_data', {
   node_id: Sequelize.INTEGER,
-  timestamp: Sequelize.INTEGER, // couldn't use REAL since Sequelize only supports REAL data type for postgressql
+  timestamp: Sequelize.REAL, // couldn't use REAL since Sequelize only supports REAL data type for postgressql
   kb: Sequelize.INTEGER,
 });
 
