@@ -11,7 +11,7 @@ const sequelize = new Sequelize({
     acquire: 30000,
     idle: 10000
   },
-  storage: 'home/demo/usage_data.sqlite3',
+  storage: '/home/demo/usage_data.sqlite3',
   logging: false,
 });
 // Users/paveynganpi/usage_data.sqlite3
